@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Stock Exchange{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Admin's Stock Exchange</h1>
+        <nav>
+            <a href="{{ url_for('admin_dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('admin_market_hours') }}">Market Hours</a>
+            <a href="{{ url_for('admin_account_management') }}">Accounts</a>
+            <a href="{{ url_for('admin_add_remove_stock') }}">Stock Management</a>
+            <a href="{{ url_for('admin_logs') }}">Logs</a>
+
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>Admin Resources</p>
+        <p>Other resources needed by the Admins to do their jobs</p>
+    </footer>
+</body>
+</html>

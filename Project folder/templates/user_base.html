@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Stock Exchange{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>User's Stock Exchange</h1>
+        <nav>
+            <a href="{{ url_for('user_dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('instructions_page') }}">How to Buy/Sell</a>
+            <a href="{{ url_for('buy_sell_stock') }}">Buy/Sell Stocks</a>
+            <a href="{{ url_for('portfolio') }}">My Portfolio</a>
+            <a href="{{ url_for('funds') }}">Add funds</a>
+
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>Contact Us</p>
+        <p>(623)555-4785</p>
+    </footer>
+</body>
+</html>
